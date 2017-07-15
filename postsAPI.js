@@ -97,7 +97,7 @@ function sortByTags (){
     let sorted2 = []
   
     data.forEach(function(el){
-      let exists = userTags.some(function(tagEl){
+      let exists = userTags.every(function(tagEl){
            return el.tags.indexOf(tagEl) !== -1
         })
         if (exists){
